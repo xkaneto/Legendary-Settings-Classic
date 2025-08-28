@@ -445,9 +445,8 @@ function LS.InitTabs(...)
     -- Hardcode pot settings
     LS.AddDropdown(#arg - 1, 1, 0, "DPSPotionUsage", "DPS Potion With", "Bloodlust+Cooldowns", "Cooldowns", "Bloodlust",
         "Bloodlust+Cooldowns", "On Cooldown", "Don't Use");
-    LS.AddDropdown(#arg - 1, 1, 1, "DPSPotionName", "DPS Potion Name", "Tempered Potion", "Tempered Potion",
-        "Potion of Unwavering Focus", "Frontline Potion", "Fleeting Tempered Potion",
-        "Fleeting Potion of Unwavering Focus", "Fleeting Frontline Potion");
+    LS.AddDropdown(#arg - 1, 1, 1, "DPSPotionName", "DPS Potion Name", "Potion of Mogu Power", "Potion of Mogu Power",
+        "Potion of the Jade Serpent", "Virmen's Bite", "Potion of the Mountains");
 
     -- Hardcode minitabs for CPU Stuff
     LS.InitMiniTabs(#arg, "CPU Settings");
