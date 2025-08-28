@@ -221,7 +221,8 @@ function frame:OnEvent(event, arg1)
             LegendarySettingsClassicDB[LS.SpecID].Profiles["Default"].ID = 1
             LegendarySettingsClassicDB[LS.SpecID].SelectedProfile = "Default"
         else
-            if LegendarySettingsClassicDB[LS.SpecID].Profiles[LegendarySettingsClassicDB[LS.SpecID].SelectedProfile] == nil then
+            if LegendarySettingsClassicDB[LS.SpecID].Profiles[LegendarySettingsClassicDB[LS.SpecID].SelectedProfile] ==
+                nil then
                 LegendarySettingsClassicDB[LS.SpecID].Profiles["Default"] = {}
                 LegendarySettingsClassicDB[LS.SpecID].Profiles["Default"].ID = 1
                 LegendarySettingsClassicDB[LS.SpecID].SelectedProfile = "Default"
@@ -607,10 +608,10 @@ end
 -- Helper: return a stable spec key for saving settings per-class+specialization
 function GetSpecKey()
     local _, classFile = UnitClass("player") or "Unknown", "UNKNOWN"
-    local specIndex = GetSpecialization() or 0
+    local specIndex = C_SpecializationInfo.GetSpecialization() or 0
     local specName = ""
     if specIndex > 0 then
-        specName = select(1, GetSpecializationInfo(specIndex)) or ""
+        specName = select(1, C_SpecializationInfo.GetSpecializationInfo(specIndex)) or ""
     end
     -- Key format: CLASS_specIndex_specName (keeps unique per-class+spec)
     return string.format("%s_%d_%s", classFile or "UNKNOWN", specIndex, specName or "")
