@@ -1,7 +1,7 @@
 ## Title: LegendarySettingsClassic
 ## Notes: A classic version of the LegendarySettings addon for World of Warcraft.
 ## Version: 1.0
-## Interface: 11506, 11507, 20504, 30405, 40402, 40401, 50500, 110205, 110107, 110200
+## Interface: 11506, 11507, 20504, 30405, 40402, 40401, 50501, 50500, 110205, 110107, 110200
 
 ## DefaultState: Enabled
 
